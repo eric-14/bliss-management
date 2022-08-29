@@ -1,0 +1,96 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+    <title>Retailer Application</title>
+</head>
+<body>
+    <div class="container">
+       <h1 class="fs-4">KIOSK PORTAL</h1> 
+    </div>
+    <div class="alert alert-success d-flex align-items-center" role="alert">
+        <svg class="bi flex-shrink-0 me-2" width="24" height="24" role="img" aria-label="Success:"><use xlink:href="#check-circle-fill"/></svg>
+        <div>
+            Mpesa Statement
+        </div>
+      </div>
+    <div class="container-fluid">
+      <div class="mb-3 row">
+        <label for="Customer Name" class="col-sm-2 col-form-label">Customer Name</label>
+        <div class="col-sm-10">
+          <input type="text" class="form-control" placeholder="Customer Name Kamau" id="CustomerName">
+        </div>
+      </div>
+
+      <div class="mb-3 row">
+        <label for="Customer Number" class="col-sm-2 col-form-label">Customer Number</label>
+        <div class="col-sm-10">
+          <input type="text" class="form-control" placeholder="Customer Number 071234565" id="CustomerNumber">
+        </div>
+        <div class="mx-auto">
+            <span class="fs-2"  onclick="costOfMilk()">Price Per Litre :</span>
+            <span class="fs-2" id="costOfMilk"></span>
+        </div>
+     </div>
+
+        <div class="mb-3 row">
+            <label for="Amount Owed" class="col-sm-2 col-form-label">NumberOfLitres</label>
+            <div class="col-sm-10">
+              <input type="text" class="form-control" placeholder="Number of Litres bought 30" id="NumberOfLitres">
+            </div>
+        </div>
+
+        <div class="mb-3 row">
+            <label for="Amount Paid" class="col-sm-2 col-form-label">Amount Paid</label>
+            <div class="col-sm-10">
+              <input type="text" class="form-control" placeholder="Amount Paid 300" id="AmountPaid">
+            </div>
+      </div>
+      <div class="container" >
+        <button type="button" onclick="addPayment()" id="addPayment" class="btn btn-success">Pay</button>
+        <div id="container">
+          <span id="updateMessage" class="fs-4"></span>
+        </div>
+      </div>
+      <div class="container" onclick="updateTable()">
+        <table class="table">
+            <thead>
+              <tr>
+                <th scope="col">Number</th>
+                <th scope="col">Customer Name</th>
+                <th scope="col">Customer Number</th>
+                <th scope="col">Amount Paid</th>
+                <th scope="col">Amount Owed</th>
+                <th scope="col">Balance</th>
+              </tr>
+            </thead>
+            <tbody id ="table">
+              <!-- <tr>
+                <th scope="row">1</th>
+                <td>Mark</td>
+                <td>100</td>
+                <td>200</td>
+              </tr>
+              <tr>
+                <th scope="row">2</th>
+                <td>Eric</td>
+                <td>3000</td>
+                <td>500</td>
+              </tr> -->
+            
+            </tbody>
+          </table>
+      </div>
+    </div>
+    <script src="front.js" ></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+</body>
+
+
+</html>
